@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>SLA Robotics -- FRC 4454</title>
+<link rel="stylesheet" type="text/css" href="robotics.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.lint.js"></script>
+<script type="text/javascript">
+//SIZE
+$(document).ready(function() {
+	var originalFontSize = 12;
+	var sectionWidth = $('#container').width();
+
+	$('.auto').each(function(){
+		var spanWidth = $(this).width();
+		var newFontSize = (sectionWidth/spanWidth) * originalFontSize;
+		$(this).css({"font-size" : newFontSize, "line-height" : newFontSize/1.2 + "px"});
+	});
+});
+//toggling
+jQuery.easing.def = "easeOutCubic";
+
+$(document).ready(function() {
+	$('#who').click(function() {
+		if ($('#whoweare').css('width') == "5px") {
+			$('#whatwedo').stop().animate({width: '10px'}, 2000);
+			$('#whatcontent').animate({opacity: '0'}, 1000);
+			$('#whenweplay').stop().animate({width: '15px'}, 2000);
+			$('#whencontent').animate({opacity: '0'}, 1000);
+			$('#whoweare').stop().animate({width: '75%'}, 2000);
+			$('#whocontent').animate({opacity: '1'}, 1000);
+			}
+		else {
+			$('#whoweare').stop().animate({width: '5px'}, 2000);
+			$('#whocontent').animate({opacity: '0'}, 1000);
+			}
+	});
+});
+$(document).ready(function() {
+	$('#what').click(function() {
+		if ($('#whatwedo').css('width') == "10px") {
+			$('#whenweplay').stop().animate({width: '15px'}, 2000);
+			$('#whencontent').animate({opacity: '0'}, 1000);
+			$('#whoweare').stop().animate({width: '5px'}, 2000);
+			$('#whocontent').animate({opacity: '0'}, 1000);
+			$('#whatwedo').stop().animate({width: '76%'}, 2000);
+			$('#whatcontent').animate({opacity: '1'}, 1000);
+			}
+		else {
+			$('#whatwedo').stop().animate({width: '10px'}, 2000);
+			$('#whatcontent').animate({opacity: '0'}, 1000);
+			}
+	});
+});
+$(document).ready(function() {
+	$('#when').click(function() {
+		if ($('#whenweplay').css('width') == "15px") {
+			$('#whoweare').stop().animate({width: '5px'}, 2000);
+			$('#whocontent').animate({opacity: '0'}, 1000);
+			$('#whatwedo').stop().animate({width: '10px'}, 2000);
+			$('#whatcontent').animate({opacity: '0'}, 1000);
+			$('#whenweplay').stop().animate({width: '77%'}, 2000);
+			$('#whencontent').animate({opacity: '1'}, 1000);
+			}
+		else {
+			$('#whenweplay').stop().animate({width: '15px'}, 2000);
+			$('#whencontent').animate({opacity: '0'}, 1000);
+			}
+	});
+});
+</script>
+</head>
+<body>
+<div id="container">
+<span class="auto">SLA</span>
+<span class="auto">ROBOTICS</span>
+<div id="sep"></div>
+<div class="item" id="who"><span class="auto">Who We Are</span></div>
+<div class="item" id="what"><span class="auto">What We Do</span></div>
+<div class="item" id="when"><span class="auto">When&nbsp;We&nbsp;Play</span></div>
+</div>
+<div id="whoweare" class="page">
+<div id="whocontent" class="content">
+<center><h1>Who Are We?</h1><br /></center>
+We are the SLA Robotics club (FRC4454). We are building a robot for the FRC Robotics competitions. Our members are:<br />
+<ul>
+<li>Mr. VanKouwenberg: Creator</li>
+<li>Wilson Biggs: Programmer/Web Developer</li>
+<li>Tobi Hahn: Supreme Lord and Dictator, Programmer, ETC</li>
+<li>Mitchell Berven-Stotz: Handyman, Pending team mascot, Team curse</li>
+<li>Daniel Tuveson: Bureaucrat, Design and Fabrication</li>
+<li>Cameron Klales: Design and Fabrication</li>
+<li>Miles Cruise-Barret: Design and Fabrication</li>
+<li>Vincent Russell: Design and Fabrication, Robot Operator</li>
+<li>Matt Ginetti: Design and Fabrication, Robot Operator</li>
+</ul>
+<br />
+</div>
+</div>
+<div id="whatwedo" class="page">
+<div id="whatcontent" class="content">
+<center><h1>What We Do</center</h1><br />
+</div>
+</div>
+<div id="whenweplay" class="page">
+<div id="whencontent" class="content">
+<center><h1>When We Play</h1></center><br />
+</div>
+</div>
+<div id="footer">
+</div>
+<div id="contact">
+FRC4454 <br />
+215.975.9620 <br />
+<a href="http://scienceleadership.org/">SLA Website</a>
+</div>
+</body>
+</html>
